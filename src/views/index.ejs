@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'home' }) %>
+
+  <body>
+    <%- include('partials/nav', {navtitle: 'Principios de la Física' }) %>
+      <main>
+        <h2>
+          <%= title %>
+        </h2>
+        <p>Para enfatizar más en el tema, haga clic en la imagen del circuito.</p>
+        <br>
+        <section>
+          <ul>
+            <li>
+              <a href="/voltaje">Calcular voltaje</a>
+            </li>
+            <li>
+              <a href="/corriente">Calcular corriente</a>
+            </li>
+            <li>
+              <a href="/resistencia">Calcular resistencia</a>
+            </li>
+          </ul>
+          <div class="ohm">
+            <a href="https://solar-energia.net/electricidad/leyes/ley-de-ohm"><img
+                src="https://solar-energia.net/uploads/cms/electricidad/leyes/ley-de-ohm.webp?ezimgfmt=rs:344x404/rscb1/ng:webp/ngcb1"></a>
+          </div>
+          <div class="trianguloOhm">
+            <img
+              src="https://dam-assets.fluke.com/s3fs-public/styles/800x534/public/6004178-dmm-whatis-ohm-top-1500x1000.jpg">
+          </div>
+        </section>
+      </main>
+      <footer>
+        <h4>Design by Carlos Lavado</h4>
+      </footer>
+  </body>
+
+</html>

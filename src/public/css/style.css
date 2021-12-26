@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: mintcream;
+  color: rgb(8, 8, 8);
+}
+
+.titulo{
+  text-align: center;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+main h2{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+a {
+  color: #00B7FF;
+  font-size: 25px;
+}
+
+section{
+  display: flex;
+  flex-direction: row;
+}
+
+.ohm{
+  animation-name: fantasma;
+  animation-duration: 2s;
+}
+
+.trianguloOhm{
+  display: inline;
+  position: relative;
+  left: 100px; 
+  animation-name: fantasma;
+  animation-duration: 5s;
+}
+
+.main-calculadoras{
+  padding-top: 20px;
+}
+
+.main-calculadoras .textarea{
+  border-radius: 5px;
+}
+
+.main-calculadoras .boton{
+  border-radius: 5px;
+}
+
+.main-calculadoras label{
+  font-size: 20px;
+}
+
+.main-calculadoras h3{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.main-calculadoras p{
+  font-size: 20px;
+}
+
+.section-calculadoras{
+  display: flex;
+}
+
+.section-calculadoras .formulas{
+  position: absolute;
+  left: 500px;
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+}
+
+.section-calculadoras .formulas:hover{
+  border: solid 1px gray;
+  box-shadow: gray;
+  transform: scale(1.59);
+}
+
+@keyframes fantasma{
+  0%{opacity:0%}
+  100%{transform:transalateY8(-20px);opacity:100%}
+ }

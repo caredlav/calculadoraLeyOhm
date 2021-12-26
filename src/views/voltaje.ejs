@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Calcular voltaje' }) %>
+
+  <body>
+    <%- include('partials/nav', {navtitle: 'Calcular el voltaje' }) %>
+      <main class="main-calculadoras">
+        <form action="/voltaje" method="post">
+          <label for="corriente">Introduzca el valor de la intensidad/corriente (I): </label>
+          <input class="textarea" type="number" step="any" id="corriente" name="corriente">
+          <label for="resistencia">Introduzca el valor de la resistencia (R): </label>
+          <input class="textarea" type="number" step="any" id="resistencia" name="resistencia">
+          <input class="boton" type="submit" value="Calcular">
+        </form>
+        <h3>Registros anteriores:</h3>
+        <section class="section-calculadoras">
+          <ul>
+            <% if(registro) { %>
+              <% registro.forEach(result=> { %>
+                <li>
+                  <p>
+                    <%= result.valor_corriente %> A * <%= result.valor_resistencia %> Ω = <%= result.valor_resultado %>
+                          V
+                  </p>
+                </li>
+                <% }) %>
+                  <% } %>
+          </ul>
+          <img class="formulas" src="img/voltaje.png">
+        </section>
+      </main>
+  </body>
+
+</html>
